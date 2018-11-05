@@ -1,0 +1,26 @@
+﻿        Catch
+        {
+            $NewLine             
+            Write-Warning -Message $ExecutionContext.InvokeCommand.ExpandString([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('The following error occurred: $_')))
+            $NewLine
+            echo -Verbose $([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('This script will now exit')))
+            $NewLine
+            Break
+        }
+        If (Test-Path -Path $DownloadLocation)
+        {
+            $NewLine
+            echo -Verbose $ExecutionContext.InvokeCommand.ExpandString([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('The following path was found: $DownloadLocation')))
+            $NewLine
+        }
+        Else
+        {
+            $NewLine
+            Write-Warning -Message $ExecutionContext.InvokeCommand.ExpandString([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('The following path could not be found: $DownloadLocation)')))
+            $NewLine
+            echo -Verbose $([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('This script will now exit')))
+            $NewLine 
+            Break
+        }
+    }
+   

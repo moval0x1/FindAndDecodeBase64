@@ -1,0 +1,26 @@
+﻿        Catch
+        {
+            $NewLine             
+            Write-Warning -Message $ExecutionContext.InvokeCommand.ExpandString([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('VABoAGUAIABmAG8AbABsAG8AdwBpAG4AZwAgAGUAcgByAG8AcgAgAG8AYwBjAHUAcgByAGUAZAA6ACAAJABfAA==')))
+            $NewLine
+            echo -Verbose $([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('VABoAGkAcwAgAHMAYwByAGkAcAB0ACAAdwBpAGwAbAAgAG4AbwB3ACAAZQB4AGkAdAA=')))
+            $NewLine
+            Break
+        }
+        If (Test-Path -Path $DownloadLocation)
+        {
+            $NewLine
+            echo -Verbose $ExecutionContext.InvokeCommand.ExpandString([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('VABoAGUAIABmAG8AbABsAG8AdwBpAG4AZwAgAHAAYQB0AGgAIAB3AGEAcwAgAGYAbwB1AG4AZAA6ACAAJABEAG8AdwBuAGwAbwBhAGQATABvAGMAYQB0AGkAbwBuAA==')))
+            $NewLine
+        }
+        Else
+        {
+            $NewLine
+            Write-Warning -Message $ExecutionContext.InvokeCommand.ExpandString([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('VABoAGUAIABmAG8AbABsAG8AdwBpAG4AZwAgAHAAYQB0AGgAIABjAG8AdQBsAGQAIABuAG8AdAAgAGIAZQAgAGYAbwB1AG4AZAA6ACAAJABEAG8AdwBuAGwAbwBhAGQATABvAGMAYQB0AGkAbwBuACkA')))
+            $NewLine
+            echo -Verbose $([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('VABoAGkAcwAgAHMAYwByAGkAcAB0ACAAdwBpAGwAbAAgAG4AbwB3ACAAZQB4AGkAdAA=')))
+            $NewLine 
+            Break
+        }
+    }
+   
